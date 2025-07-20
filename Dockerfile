@@ -21,7 +21,7 @@ RUN useradd -m appuser && chown -R appuser:appuser /ollama_proxy_server
 USER appuser
 
 # Set Python path to include current directory
-ENV PYTHONPATH="/app:$PYTHONPATH"
+ENV PYTHONPATH="/ollama_proxy_server:$PYTHONPATH"
 # Do not buffer output, e.g. logs to stdout
 ENV PYTHONUNBUFFERED=1
 
